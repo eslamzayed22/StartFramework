@@ -1,0 +1,26 @@
+.content {
+    color: #2c3e50;
+}
+.line {
+background-color: #2c3e50;
+}
+.overlay {
+    background-color: #1abc9ce6;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.overlay:hover {
+    opacity: 1;
+}
+.layer img {
+    width: 40%
+}
+@media only screen and (max-width: 1024px) { 
+    .layer img {
+    width: 80%;
+    }
+}
+.line {
+    background-color: #2c3e50 !important;
+}

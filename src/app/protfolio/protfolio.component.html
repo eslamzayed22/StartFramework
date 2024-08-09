@@ -1,0 +1,70 @@
+<div class="portfolio mb-5">
+    <div class="text-center">
+        <div class="content pt-5">
+            <h2 class="fw-bolder fs-1 ">PORTFOLIO COMPONENT</h2>
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <div class="line"></div>
+                <i class="fa-solid fa-star px-2"></i>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4" (click)="open('poert1.png')">
+                <div class="rounded-3 overflow-hidden position-relative">
+                    <img src="../../assets/images/poert1.png" alt="" class="card-img">
+                    <div _ngcontent-gbx-c19="" class="overlay position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                        <i _ngcontent-gbx-c19="" class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"(click)="open('port2.png')">
+                <div class="rounded-3 overflow-hidden position-relative">
+                    <img src="./assets/images/port2.png" alt="" class="card-img">
+                    <div _ngcontent-gbx-c19="" class="overlay position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                        <i _ngcontent-gbx-c19="" class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"(click)="open('port3.png')">
+                <div class="rounded-3 overflow-hidden position-relative">
+                    <img src="./assets/images/port3.png" alt="" class="card-img">
+                    <div _ngcontent-gbx-c19="" class="overlay position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                        <i _ngcontent-gbx-c19="" class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"(click)="open('poert1.png')">
+                <div class="rounded-3 overflow-hidden position-relative">
+                    <img src="./assets/images/poert1.png" alt="" class="card-img">
+                    <div _ngcontent-gbx-c19="" class="overlay position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                        <i _ngcontent-gbx-c19="" class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"(click)="open('port2.png')">
+                <div class="rounded-3 overflow-hidden position-relative">
+                    <img src="./assets/images/port2.png" alt="" class="card-img">
+                    <div _ngcontent-gbx-c19="" class="overlay position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                        <i _ngcontent-gbx-c19="" class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"(click)="open('port3.png')">
+                <div class="rounded-3 overflow-hidden position-relative">
+                    <img src="./assets/images/port3.png" alt="" class="card-img">
+                    <div _ngcontent-gbx-c19="" class="overlay position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                        <i _ngcontent-gbx-c19="" class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (isClicked == true) {
+        <div (click)="close()" class="layer d-flex justify-content-center align-items-center bg-opacity-25 position-fixed start-0 top-0 w-100 h-100 bg-primary z-3">
+            <img [src]="imgSrc" alt=""  >
+        </div>
+    }
+</div>
+<app-footer></app-footer>
