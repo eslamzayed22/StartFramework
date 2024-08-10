@@ -1,4 +1,4 @@
-import { Component, HostListener, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -9,19 +9,14 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isNavbarExpanded = true; 
+  @ViewChild('nav') el!:ElementRef;
 
-  constructor(private renderer: Renderer2) {}
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const verticalOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (verticalOffset > 100) {
-      this.renderer.removeClass(document.querySelector('nav'), 'py-3' );
-      this.isNavbarExpanded = false;
-    } else {
-      this.renderer.addClass(document.querySelector('nav'), 'py-3');
-      this.isNavbarExpanded = true;
+  @HostListener('window:scroll') onScroll() {
+    if (scrollY > 100){
+      this.el.nativeElement.classList.remove("py-3")
+    }
+    else {
+      this.el.nativeElement.classList.add("py-3")
     }
   }
 }
